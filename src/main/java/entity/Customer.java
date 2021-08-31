@@ -1,34 +1,40 @@
-package Entity;
+package entity;
+
+import dto.CustomerDto;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.List;
 
 
-@Entity(name = "Order")
-public class Order {
+@Entity(name = "Customer")
+public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String name;
     private String lastname;
     private Long id;
-    private String address;
 
-    public Order() {
-
+    public Customer() {
     }
 
-    public Order(String address) {
-        this.address = address;
+    public static List<Customer> getAll() {
+        return null;
     }
 
-    public Long getId() {
-        return id;
+    public static Customer create(CustomerDto dto) {
+        return null;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public static void delete(Integer id) {
+    }
+
+    public static void create(String yriy, String petrov, int i) {
+    }
+
+    public static void create(String s, String bmw, String cool_modern_car, int i) {
     }
 
     public String getName() {
@@ -47,11 +53,11 @@ public class Order {
         this.lastname = lastname;
     }
 
-    public String getAddress() {
-        return address;
+    public Long getId() {
+        return id;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setId(Long id) {
+        this.id = id;
     }
 }

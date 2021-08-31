@@ -1,10 +1,14 @@
 package dto;
 
-import Entity.Lombok;
+import lombok.Data;
 
-@Lombok
+@Data
 public class CustomerDto {
     private String name;
     private String lastname;
     private Long id;
+
+    public boolean existsById(Integer idToDelete) {
+        return false;
+    }
 }

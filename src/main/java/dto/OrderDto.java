@@ -1,8 +1,9 @@
 package dto;
 
-import Entity.Lombok;
+import entity.Lombok;
+import lombok.Data;
 
-@Lombok
+@Data
 public class OrderDto {
     private String name;
     private String lastname;

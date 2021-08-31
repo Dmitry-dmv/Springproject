@@ -1,34 +1,27 @@
-package Entity;
-
-import dto.CustomerDto;
+package entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.List;
 
 
-@Entity(name = "Customer")
-public class Customer {
+@Entity(name = "Employees")
+public class Employees {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String name;
     private String lastname;
     private Long id;
 
-    public Customer() {
+
+    public Employees() {
     }
 
-    public static List<Customer> getAll() {
-        return null;
+    public static void create(String s, String bmw, String cool_modern_car, int i) {
     }
 
-    public static Customer create(CustomerDto dto) {
-        return null;
-    }
-
-    public static void delete(Integer id) {
+    public static void create(String yriy, String petrov, int i) {
     }
 
     public String getName() {

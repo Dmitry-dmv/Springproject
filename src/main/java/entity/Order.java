@@ -1,4 +1,4 @@
-package Entity;
+package entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,16 +6,29 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 
-@Entity(name = "Employees")
-public class Employees {
+@Entity(name = "Order")
+public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String name;
     private String lastname;
     private Long id;
+    private String address;
 
+    public Order() {
 
-    public Employees() {
+    }
+
+    public Order(String address) {
+        this.address = address;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -34,11 +47,11 @@ public class Employees {
         this.lastname = lastname;
     }
 
-    public Long getId() {
-        return id;
+    public String getAddress() {
+        return address;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setAddress(String address) {
+        this.address = address;
     }
 }
