@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.List;
 
 
 @Entity(name = "Order")
@@ -21,6 +22,10 @@ public class Order {
 
     public Order(String address) {
         this.address = address;
+    }
+
+    public static List<Order> getAll() {
+        return null;
     }
 
     public Long getId() {
