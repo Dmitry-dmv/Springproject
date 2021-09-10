@@ -1,5 +1,6 @@
 package com.example.demo.dto;
 
+import com.example.demo.repository.EmployeesRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.AfterEach;
@@ -26,7 +27,7 @@ public class EmployeesDtoTest {
     @Autowired
     private ObjectMapper objectMapper;
     @Autowired
-    private EmployeesDto repository;
+    private EmployeesRepository repository;
     @Autowired
     private MockMvc mockMvc;
     private Object Name;

@@ -3,7 +3,7 @@ package com.example.demo.servise;
 import ch.qos.logback.core.joran.util.beans.BeanDescriptionFactory;
 import com.example.demo.entity.Customer;
 import com.example.demo.entity.Employees;
-import com.example.demo.repository.Customer_repository;
+import com.example.demo.repository.CustomerRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

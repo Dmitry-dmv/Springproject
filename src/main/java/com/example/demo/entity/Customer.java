@@ -12,30 +12,17 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-@Table(name = "Customer")
 public class Customer {
-    @Column(name = "id")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "name")
-    private String name;
-    @Column(name = "lastname")
+    private String firstname;
     private String lastname;
-    @Column(name = "email")
+    private String phoneNumber;
+    @Column(nullable = false, unique = true)
     private String email;
+    private boolean isActive = true;
 
-
-    public static Customer create(CustomerDto dto) {
-        return null;
-    }
-
-    public static List<Customer> getAll() {
-        return null;
-    }
-
-    public static void delete(Integer id) {
-    }
 }
 
 

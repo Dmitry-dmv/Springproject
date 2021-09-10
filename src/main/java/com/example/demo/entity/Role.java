@@ -1,4 +1,4 @@
 package com.example.demo.entity;
 
-public @interface Lombok {
+public class Role {
 }
