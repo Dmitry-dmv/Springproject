@@ -1,64 +1,28 @@
 package com.example.demo.entity;
 
-import com.example.demo.dto.CustomerDto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.example.demo.dto.CustomerDto;
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.*;
 import java.util.List;
 
 
 @Entity
+@Getter
+@Setter
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    private String name;
+    private String firstname;
     private String lastname;
+    private String phoneNumber;
+    @Column(nullable = false, unique = true)
+    private String email;
+    private boolean isActive = true;
 
-    public Customer() {
-    }
-
-    public static List<Customer> getAll() {
-        return null;
-    }
-
-    public static Customer create(CustomerDto dto) {
-        return null;
-    }
-
-    public static void delete(Integer id) {
-    }
-
-    public static void create(String yriy, String petrov, int i) {
-    }
-
-    public static void create(String s, String bmw, String cool_modern_car, int i) {
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 }
+
+

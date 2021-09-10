@@ -1,10 +1,16 @@
 package com.example.demo.entity;
 
-import javax.persistence.*;
+import org.springframework.data.annotation.Id;
 
-@Entity
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+@Entity(name = "Catalog")
+
+
 public class Catalog {
-
+    @javax.persistence.Id
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
