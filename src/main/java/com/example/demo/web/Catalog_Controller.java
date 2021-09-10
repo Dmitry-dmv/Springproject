@@ -22,7 +22,7 @@ public class Catalog_Controller {
 //    List<Catalog> getAll() {
 //        return Catalog.getAll();
 //    }
-//
+
     @PostMapping
     public CatalogDto create(@RequestBody CatalogDto catalogDto) {
         return catalogService.create(catalogDto);
