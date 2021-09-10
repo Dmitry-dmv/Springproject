@@ -1,15 +1,14 @@
-//package com.example.demo.web;
-//
-//import com.example.demo.entity.Catalog;
-//import org.hibernate.engine.spi.Status;
-//import org.springframework.stereotype.Controller;
-//import org.springframework.web.bind.annotation.*;
-//
-//import java.util.List;
-//
-//@Controller
-//public class Catalog_Controller {
-//    private Status ControllerMessages;
+package com.example.demo.web;
+
+import com.example.demo.dto.CatalogDto;
+import com.example.demo.service.ICatalogService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.*;
+
+@RequiredArgsConstructor
+@RestController("/catalog")
+public class Catalog_Controller {
+       private final ICatalogService catalogService;
 //
 //
 //    @GetMapping(path = "/{id}")
@@ -24,10 +23,10 @@
 //        return Catalog.getAll();
 //    }
 //
-//    @PostMapping
-//    public Catalog create(@RequestBody Catalog dto) {
-//        return Catalog.create(dto);
-//    }
+    @PostMapping
+    public CatalogDto create(@RequestBody CatalogDto catalogDto) {
+        return catalogService.create(catalogDto);
+    }
 //
 //    @PutMapping
 //    public Catalog update(@RequestBody Catalog dto) {
@@ -40,5 +39,5 @@
 //        Catalog.deleteById(id);
 //        return ControllerMessages.DELETED.name() + id;
 //    }
-//
-//}
+
+}
