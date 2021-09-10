@@ -13,8 +13,8 @@ import javax.annotation.PostConstruct;
 @Slf4j
 @RequiredArgsConstructor
 public class Initdata {
-    public final Customer customer;
-    public final Employees employees;
+//    public final Customer customer;
+//    public final Employees employees;
     @PostConstruct
     public void init() {
         BeanDescriptionFactory customer = null;

@@ -9,13 +9,14 @@ import javax.persistence.Id;
 import java.util.List;
 
 
-@Entity(name = "Customer")
+@Entity
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String name;
     private String lastname;
-    private Long id;
 
     public Customer() {
     }

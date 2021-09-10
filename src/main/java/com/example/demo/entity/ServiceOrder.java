@@ -7,24 +7,25 @@ import javax.persistence.Id;
 import java.util.List;
 
 
-@Entity(name = "Order")
-public class Order {
+@Entity
+public class ServiceOrder {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String name;
     private String lastname;
-    private Long id;
     private String address;
 
-    public Order() {
+    public ServiceOrder() {
 
     }
 
-    public Order(String address) {
+    public ServiceOrder(String address) {
         this.address = address;
     }
 
-    public static List<Order> getAll() {
+    public static List<ServiceOrder> getAll() {
         return null;
     }
 

@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@org.springframework.stereotype.Controller
+@RestController
+@RequestMapping("/customer")
 public class Customer_Controller {
     @GetMapping("/{login}")
     public String getSomeData(@PathVariable Integer id, @PathVariable String login) {

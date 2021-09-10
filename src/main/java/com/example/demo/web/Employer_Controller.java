@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
+@RequestMapping("/empl")
 public class Employer_Controller {
     @GetMapping("/{login}")
     public String getSomeData(@PathVariable Integer id, @PathVariable String login) {
