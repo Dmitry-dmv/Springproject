@@ -11,7 +11,7 @@ import java.util.List;
 @Controller
 public class Order_Controller {
     @GetMapping("/{name}")
-    public String getSomeData(@PathVariable Integer id, @PathVariable String login) {
+    public String getSomeData(@PathVariable Integer id, @PathVariable String login, @PathVariable String name) {
         return "enter your username" + id;
     }
     @GetMapping("/address")
