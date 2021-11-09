@@ -17,7 +17,7 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String address;
-    private LocalDateTime time;//TODO посмотреть аннотацию
+    private LocalDateTime time;
 
     @ManyToOne
     private Customer customer;
@@ -25,7 +25,7 @@ public class Order {
     @ManyToOne
     private Employees employee;
 
-    //TODO посмотреть параметры для аннотации ManyToMany с catalog
+    
 
 
 }
