@@ -15,12 +15,12 @@ public interface CatalogRepository extends CrudRepository<Catalog ,Long> {
 
     List<Catalog> findAllByNameContainsIgnoreCaseAndPriceBetween(String name, Long min, Long max);
 
-    //TODO remove comments
-//    List<Catalog> findAllByPriceGreaterThanEqual(Long price);
-//
-//    List<Catalog> findAllByPriceLess(Long price);
-//
-//    List<Catalog> findAllByPriceBetweenOrPriceEquals(Long start, Long end);
+    
+      List<Catalog> findAllByPriceGreaterThanEqual(Long price);
+
+      List<Catalog> findAllByPriceLess(Long price);
+
+     List<Catalog> findAllByPriceBetweenOrPriceEquals(Long start, Long end);
 
 
 }
